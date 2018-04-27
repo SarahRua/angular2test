@@ -1,0 +1,46 @@
+<div class="container"
+    fxLayout="column"
+    fxLayoutGap="10px">
+
+    <div fxFlex>
+<div>
+  <h3> My wonderful items</h3>
+  <hr>
+  </div>
+    </div>
+
+<div fxFlex>
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let dish of dishes">
+        <img height="200px" src={{dish.image}} alt={{dish.name}} >
+        <mat-grid-tile-footer>
+                  <h1 mat-line>{{dish.name | uppercase}}</h1>
+        <p mat-line>
+          <span>{{dish.description}}</span>
+          </p>
+        </mat-grid-tile-footer>
+
+      </mat-grid-tile>
+      </mat-grid-list>
+      </div>
+
+      <div fxFlex *ngIf="selectedSnap">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <h3>{{selectedSnap.name | uppercase}}</h3>
+            </mat-card-title>
+           </mat-card-header>
+                   <img mat-card-image src="{{selectedSnap.image}}" alt="{{selectedSnap.name}}">
+   
+          <mat-card-content>
+            <p> {{selectedSnap.description}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Print</button>
+            <button mat-button>Save</button>
+          </mat-card-actions>
+          </mat-card>
+        </div>
+</div>
+
