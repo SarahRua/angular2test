@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Dish } from '../shared/dish';
+import { Snap } from '../shared/snap';
 
-const SNAPS: Dish[] = [
+const SNAPS: Snap[] = [
                          {
                            name:'Preparation',
                            image: '/assets/images/prep.jpg',
                            category: 'Before',
                            label:'colour',
-                           price:'',
+
                            description:'Preparation before hand'     },
                         {
                            name:'Newly Weds',
                            image: '/assets/images/newlywed.jpg',
                            category: 'Ceremony',
                            label:'black and white',
-                           price:'',
+         
                            description:'After the ceremony'                        },
                         {
                            name:'Barna',
                            image: '/assets/images/woods.jpg',
                            category: 'dessert',
                            label:'',
-                           price:'',
+                           
                            description:'In the woods'                        }
                         ];;
 
@@ -33,9 +33,9 @@ const SNAPS: Dish[] = [
 })
 export class MenuComponent implements OnInit {
 
-  dishes: Dish[] = SNAPS;
+  snaps: Snap[] = SNAPS;
 
-  selectedSnap: Dish = SNAPS[0];
+  selectedSnap: Snap = SNAPS[0];
 
   constructor() { }
 

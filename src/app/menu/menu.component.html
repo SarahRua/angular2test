@@ -11,12 +11,12 @@
 
 <div fxFlex>
     <mat-grid-list cols="2" rowHeight="200px">
-      <mat-grid-tile *ngFor="let dish of dishes">
-        <img height="200px" src={{dish.image}} alt={{dish.name}} >
+      <mat-grid-tile *ngFor="let snap of snaps">
+        <img height="200px" src={{snap.image}} alt={{snap.name}} >
         <mat-grid-tile-footer>
-                  <h1 mat-line>{{dish.name | uppercase}}</h1>
+                  <h1 mat-line>{{snap.name | uppercase}}</h1>
         <p mat-line>
-          <span>{{dish.description}}</span>
+          <span>{{snap.description}}</span>
           </p>
         </mat-grid-tile-footer>
 

@@ -1,8 +1,7 @@
-export class Dish{
+export class Snap{
     name: string;
     image: string;
     category: string;
     label: string;
-    price: string;
     description: string;
 }
